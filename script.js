@@ -1,15 +1,35 @@
-var createDiv = function(){
-const insideContainer = document.querySelector(".container");
-const newDiv = document.createElement("div");
-newDiv.textContent = "";
-insideContainer.appendChild(newDiv);
+
+
+var createDiv = function () {
+    const insideContainer = document.querySelector(".container");
+    const newDiv = document.createElement("div");
+    newDiv.addEventListener("mouseover", colorChange);
+    newDiv.classList.add("divs");
+    insideContainer.appendChild(newDiv);
 };
 console.log(createDiv())
 
+function colorChange(event) {
+    event.target.style.backgroundColor = "#00FF00";
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    event.target.style.backgroundColor = color;
 
-function createMultipleDivs(n){
-    for(let i = 1; i < n; i++){
+}
+
+function clearButton(){
+
+}
+
+
+function createMultipleDivs(n) {
+    for (let i = 1; i < n; i++) {
         createDiv();
     };
 };
 createMultipleDivs(256);
+
+//necesito que el id sea unico (pasarle el numero de iteracion).
