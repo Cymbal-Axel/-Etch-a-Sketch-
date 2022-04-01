@@ -34,7 +34,7 @@ function resetBoton(){
 function promPT(clientPrompt){
     var clientPrompt = prompt('Ingrese un numero entre 0 y 100');
     if (clientPrompt > 100 || clientPrompt <= 0){
-        alert('Error, el numero debe ser mayor a 0 o menor a 100');
+        alert('Error, el numero debe ser entre 0 y 100');
     }else {return createMultipleDivs(clientPrompt)}
 }
 
