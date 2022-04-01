@@ -31,11 +31,18 @@ function resetBoton(){
     }
 }
 
+function promPT(clientPrompt){
+    var clientPrompt = prompt('Ingrese un numero entre 0 y 100');
+    if (clientPrompt > 100 || clientPrompt <= 0){
+        alert('Error, el numero debe ser mayor a 0 o menor a 100');
+    }else {return createMultipleDivs(clientPrompt)}
+}
+
 function createMultipleDivs(n) {
     for (let i = 1; i < n; i++) {
         createDiv();
     };
 };
-createMultipleDivs(256);
+createMultipleDivs(promPT());
 
 //necesito que el id sea unico (pasarle el numero de iteracion).
