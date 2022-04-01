@@ -1,5 +1,3 @@
-
-
 var createDiv = function () {
     const insideContainer = document.querySelector(".container");
     const newDiv = document.createElement("div");
@@ -20,10 +18,18 @@ function colorChange(event) {
 
 }
 
-function clearButton(){
-
+function boton() {
+    var boton = document.getElementById("boton");
+    boton.addEventListener("click", resetBoton);
 }
+boton()
 
+function resetBoton(){
+    var clearDivs = document.querySelectorAll(".divs");
+    for (let i = 0 ; i < clearDivs.length; i++){
+        clearDivs[i].style.backgroundColor = "#ecf0f1";   
+    }
+}
 
 function createMultipleDivs(n) {
     for (let i = 1; i < n; i++) {
