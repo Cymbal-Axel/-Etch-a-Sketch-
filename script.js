@@ -5,7 +5,6 @@ var createDiv = function () {
     newDiv.classList.add("divs");
     insideContainer.appendChild(newDiv);
 };
-console.log(createDiv())
 
 function colorChange(event) {
     event.target.style.backgroundColor = "#00FF00";
