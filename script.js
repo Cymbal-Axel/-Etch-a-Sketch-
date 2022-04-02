@@ -38,10 +38,23 @@ function promPT(clientPrompt){
 }
 
 function createMultipleDivs(n) {
-    for (let i = 1; i < n; i++) {
+    for (let i = 0; i < n; i++) {
         createDiv();
     };
 };
 createMultipleDivs(promPT());
 
-//necesito que el id sea unico (pasarle el numero de iteracion).
+var play = function(){
+    var div = document.querySelectorAll(".divs");
+    for (let i = 0; i < div.length; i++){
+        div[i].parentNode.removeChild(div[i])
+    }
+    createMultipleDivs(promPT());
+
+}
+
+function playBoton(){
+    var boton = document.getElementById("botonPlay");
+    boton.addEventListener("click", play)
+}
+playBoton()
