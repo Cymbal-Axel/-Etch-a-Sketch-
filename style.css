@@ -1,12 +1,23 @@
+body{
+    background-color: beige;
+}
+.wrap-container{
+    display: grid;
+    grid-template-columns: 50px;
+    grid-template-rows: 500px;
+    text-align: center;
+    margin-left: 600px;
+    margin-right: 630px;
+    height: 294px;
+    margin-top: 200px;
+}
+
 .container {
     display: grid;
+    position: absolute;
     grid-template-columns: repeat(16, 1fr);
-    margin-left: 25%;
-    margin-right: 25%;
-    margin-top: 10%;    
-    margin-bottom: 10%;    
+  
 
-   /* grid-gap: 1px;*/
 }
 
 .container div {
@@ -17,6 +28,7 @@
 }
 
 .boton{
+
     text-align: center;
     margin-left: 46%;
     padding: 20px;
