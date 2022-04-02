@@ -2,7 +2,8 @@ body{
     background-color: beige;
 }
 .wrap-container{
-    display: grid;
+    display: flex;
+    justify-content: center;
     grid-template-columns: 50px;
     grid-template-rows: 500px;
     text-align: center;
@@ -28,8 +29,9 @@ body{
 }
 
 .boton{
-
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-left: 46%;
     padding: 20px;
 }
