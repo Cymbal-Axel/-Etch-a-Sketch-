@@ -23,18 +23,22 @@ function boton() {
 }
 boton()
 
-function resetBoton(){
+function resetBoton() {
     var clearDivs = document.querySelectorAll(".divs");
-    for (let i = 0 ; i < clearDivs.length; i++){
-        clearDivs[i].style.backgroundColor = "#ecf0f1";   
+    for (let i = 0; i < clearDivs.length; i++) {
+        clearDivs[i].style.backgroundColor = "#ecf0f1";
     }
 }
 
-function promPT(clientPrompt){
-    var clientPrompt = prompt('Ingrese un numero entre 0 y 100');
-    if (clientPrompt > 100 || clientPrompt <= 0){
+function promPT(clientPrompt) {
+    var form = document.querySelector(".form");
+    var input = document.getElementById("inputID");
+    var clientPrompt = input.value;
+    if (clientPrompt > 100 || clientPrompt <= 0) {
         alert('Error, el numero debe ser entre 0 y 100');
-    }else {return createMultipleDivs(clientPrompt)}
+    } else {
+        return createMultipleDivs(clientPrompt)
+    }
 }
 
 function createMultipleDivs(n) {
@@ -42,18 +46,18 @@ function createMultipleDivs(n) {
         createDiv();
     };
 };
-createMultipleDivs(promPT());
+createMultipleDivs(promPT()); //createMultipleDivs(promPT());
 
-var play = function(){
+var play = function () {
     var div = document.querySelectorAll(".divs");
-    for (let i = 0; i < div.length; i++){
+    for (let i = 0; i < div.length; i++) {
         div[i].parentNode.removeChild(div[i])
     }
     createMultipleDivs(promPT());
 
 }
 
-function playBoton(){
+function playBoton() {
     var boton = document.getElementById("botonPlay");
     boton.addEventListener("click", play)
 }
